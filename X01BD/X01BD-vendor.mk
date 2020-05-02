@@ -65,4 +65,5 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libqcomfm_jni \
     libsdm-disp-apis \
-    vendor.qti.hardware.fm@1.0
+    vendor.qti.hardware.fm@1.0 \
+    WfdCommon

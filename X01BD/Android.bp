@@ -74,3 +74,8 @@ cc_prebuilt_library_shared {
 	product_specific: true,
 }
 
+dex_import {
+	name: "WfdCommon",
+	owner: "asus",
+	jars: ["proprietary/framework/WfdCommon.jar"],
+}
