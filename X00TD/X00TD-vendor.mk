@@ -1583,7 +1583,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libantradio \
     libavenhancements \
-    libqcomfm_jni \
     libqct_resampler \
     libqti-iopd \
     libthermalclient \
