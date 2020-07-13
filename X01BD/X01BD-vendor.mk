@@ -54,7 +54,6 @@ PRODUCT_COPY_FILES += \
     vendor/asus/X01BD/proprietary/product/lib64/vendor.display.postproc@1.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.display.postproc@1.0.so
 
 PRODUCT_PACKAGES += \
-    libqcomfm_jni \
     libsdm-disp-apis \
     vendor.qti.hardware.fm@1.0 \
     WfdCommon
