@@ -39,26 +39,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "libqti-iopd",
-	owner: "asus",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/vendor/lib/libqti-iopd.so"],
-		},
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libqti-iopd.so"],
-		},
-	},
-	compile_multilib: "both",
-	check_elf_files: false,
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
 	name: "libthermalclient",
 	owner: "asus",
 	strip: {
@@ -116,10 +96,32 @@ cc_prebuilt_library_shared {
 }
 
 android_app_import {
+	name: "CACertService",
+	owner: "asus",
+	apk: "proprietary/vendor/app/CACertService/CACertService.apk",
+	presigned: true,
+	dex_preopt: {
+		enabled: false,
+	},
+	soc_specific: true,
+}
+
+android_app_import {
 	name: "CneApp",
 	owner: "asus",
 	apk: "proprietary/vendor/app/CneApp/CneApp.apk",
 	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	soc_specific: true,
+}
+
+android_app_import {
+	name: "ConnectionSecurityService",
+	owner: "asus",
+	apk: "proprietary/vendor/app/ConnectionSecurityService/ConnectionSecurityService.apk",
+	presigned: true,
 	dex_preopt: {
 		enabled: false,
 	},
@@ -138,6 +140,17 @@ android_app_import {
 }
 
 android_app_import {
+	name: "QCC-TR-UI",
+	owner: "asus",
+	apk: "proprietary/vendor/app/QCC-TR-UI/QCC-TR-UI.apk",
+	presigned: true,
+	dex_preopt: {
+		enabled: false,
+	},
+	soc_specific: true,
+}
+
+android_app_import {
 	name: "QFingerprintService",
 	owner: "asus",
 	apk: "proprietary/vendor/app/QFingerprintService/QFingerprintService.apk",
@@ -149,10 +162,32 @@ android_app_import {
 }
 
 android_app_import {
+	name: "SSGTelemetryService",
+	owner: "asus",
+	apk: "proprietary/vendor/app/SSGTelemetryService/SSGTelemetryService.apk",
+	presigned: true,
+	dex_preopt: {
+		enabled: false,
+	},
+	soc_specific: true,
+}
+
+android_app_import {
 	name: "TimeService",
 	owner: "asus",
 	apk: "proprietary/vendor/app/TimeService/TimeService.apk",
 	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	soc_specific: true,
+}
+
+android_app_import {
+	name: "TrustZoneAccessService",
+	owner: "asus",
+	apk: "proprietary/vendor/app/TrustZoneAccessService/TrustZoneAccessService.apk",
+	presigned: true,
 	dex_preopt: {
 		enabled: false,
 	},
@@ -189,17 +224,9 @@ dex_import {
 }
 
 prebuilt_etc_xml {
-	name: "android.hardware.gnss@2.0-service-qti.xml",
+	name: "vendor.qti.gnss@4.0-service.xml",
 	owner: "asus",
-	src: "proprietary/vendor/etc/vintf/manifest/android.hardware.gnss@2.0-service-qti.xml",
-	sub_dir: "vintf/manifest",
-	soc_specific: true,
-}
-
-prebuilt_etc_xml {
-	name: "vendor.qti.gnss@3.0-service.xml",
-	owner: "asus",
-	src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.gnss@3.0-service.xml",
+	src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.gnss@4.0-service.xml",
 	sub_dir: "vintf/manifest",
 	soc_specific: true,
 }
