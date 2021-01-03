@@ -1,5 +1,5 @@
 /**
- * Copyright (C) 2019-2020 Paranoid Android
+ * Copyright (C) 2019-2021 Paranoid Android
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -193,12 +193,6 @@ android_app_import {
 	},
 	privileged: true,
 	product_specific: true,
-}
-
-dex_import {
-	name: "com.qti.snapdragon.sdk.display",
-	owner: "asus",
-	jars: ["proprietary/framework/com.qti.snapdragon.sdk.display.jar"],
 }
 
 prebuilt_etc_xml {
